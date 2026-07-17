@@ -270,7 +270,7 @@ export default function Portfolio() {
           </div>
 
           <div className="grid grid-cols-3 gap-2 text-center pt-6 mt-6 border-t border-slate-900">
-            {["Node", "Golang", "React"].map((label) => (
+            {["Node.js", "Golang", "React"].map((label) => (
               <div key={label}>
                 <div className="text-base font-bold text-white">{label}</div>
                 <div className="text-[9px] uppercase tracking-wider text-slate-500">
