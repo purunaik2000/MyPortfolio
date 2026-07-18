@@ -64,7 +64,18 @@ const experienceTimeline = [
       "Participated in architecture design for low-latency, high-throughput backend services.",
       "Improved inter-service communication, performance, and system reliability.",
     ],
-    tech: ["Go", "Kafka", "NATS", "Redis", "Docker", "gRPC", "Elasticsearch", "Prometheus", "Grafana", "FluentD"],
+    tech: [
+      "Go",
+      "Kafka",
+      "NATS",
+      "Redis",
+      "Docker",
+      "gRPC",
+      "Elasticsearch",
+      "Prometheus",
+      "Grafana",
+      "FluentD",
+    ],
   },
   {
     period: "NOV 2023 — DEC 2025",
@@ -77,7 +88,18 @@ const experienceTimeline = [
       "Contributed to architecture decisions for scalable microservices and event-driven systems.",
       "Optimized React applications handling high-frequency live market data (LTP).",
     ],
-    tech: ["Node.js", "Express", "React", "MongoDB", "Redis", "WebSocket", "Go", "Redpanda", "Protobuf", "AWS"],
+    tech: [
+      "Node.js",
+      "Express",
+      "React",
+      "MongoDB",
+      "Redis",
+      "WebSocket",
+      "Go",
+      "Redpanda",
+      "Protobuf",
+      "AWS",
+    ],
   },
   {
     period: "NOV 2022 — OCT 2023",
@@ -194,11 +216,19 @@ export default function Portfolio() {
             <p className="max-w-xl text-slate-400 text-sm sm:text-base leading-relaxed">
               I specialize in low-latency microservices, event-driven pipelines,
               and high-frequency real-time execution layers. Actively building
-              robust infrastructures with <strong>Node.js</strong>,{" "} <strong>Golang</strong>,{" "}
-              <strong>React</strong>, and modern message brokers.
+              robust infrastructures with <strong>Node.js</strong>,{" "}
+              <strong>Golang</strong>, <strong>React</strong>, and modern
+              message brokers.
             </p>
+
+            <div className="hidden md:block absolute top-8 right-8">
+              <img
+                src="profile.png"
+                alt="Purushottam Naik"
+                className="w-40 h-40 rounded-full object-cover border-4 border-slate-800 ring-4 ring-blue-500/20 hover:ring-blue-500/40 shadow-2xl"
+              />
+            </div>
           </div>
-          
 
           <div className="flex flex-wrap gap-6 text-xs text-slate-400 pt-4 border-t border-slate-900">
             <div className="flex items-center gap-2">
@@ -229,7 +259,7 @@ export default function Portfolio() {
               rel="noopener noreferrer"
               className="block"
             >
-              <div className="flex items-center justify-between p-3.5 bg-slate-950/60 border border-slate-800/40 rounded-xl">
+              <div className="flex items-center justify-between p-3.5 bg-slate-950/60 border border-slate-800/40 rounded-xl hover:border-indigo-500/40 transition-all duration-300">
                 <div className="flex items-center gap-3">
                   <Award className="w-5 h-5 text-amber-500" />
                   <div>
@@ -252,7 +282,7 @@ export default function Portfolio() {
               rel="noopener noreferrer"
               className="block"
             >
-              <div className="flex items-center justify-between p-3.5 bg-slate-950/60 border border-slate-800/40 rounded-xl">
+              <div className="flex items-center justify-between p-3.5 bg-slate-950/60 border border-slate-800/40 rounded-xl hover:border-indigo-500/40 transition-all duration-300">
                 <div className="flex items-center gap-3">
                   <Code2 className="w-5 h-5 text-blue-400" />
                   <div>
@@ -392,7 +422,7 @@ export default function Portfolio() {
                 </span>
 
                 {/* Card */}
-                <div className="mt-3 rounded-2xl border border-slate-800 bg-slate-900/40 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/40 hover:bg-slate-950/50 hover:shadow-xl hover:shadow-blue-500/5">
+                <div className="mt-3 rounded-2xl border border-slate-800 bg-slate-900/40 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-indigo-500/40 hover:bg-slate-950/50 hover:shadow-xl hover:shadow-blue-500/5">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                     <div>
                       <h3 className="text-lg font-semibold text-white">
@@ -443,7 +473,7 @@ export default function Portfolio() {
             {techStack.map((tech) => (
               <span
                 key={tech}
-                className="px-3 py-1.5 bg-slate-950/60 border border-slate-800/60 text-slate-300 rounded-xl text-xs font-medium"
+                className="px-3 py-1.5 bg-slate-950/60 border border-slate-800/60 text-slate-300 rounded-xl text-xs font-medium hover:border-indigo-500/40 hover:bg-slate-950 hover:text-slate-100 transition-all duration-300 cursor-default"
               >
                 {tech}
               </span>
@@ -484,9 +514,16 @@ export default function Portfolio() {
             className="relative w-full max-w-4xl max-h-[85vh] flex flex-col items-center bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl p-4"
             onClick={(e) => e.stopPropagation()}
           >
-            <button
+            {/* <button
               onClick={closeModal}
               className="absolute top-1 right-1 flex items-center gap-1 text-slate-400 hover:text-white bg-slate-900/80 hover:bg-slate-900 border border-slate-800/80 px-3 py-1.5 rounded-xl text-xs font-semibold transition"
+            >
+              <X className="w-4 h-4" />
+              Close
+            </button> */}
+            <button
+              onClick={closeModal}
+              className="absolute top-1 right-1 flex items-center gap-1 text-slate-100 hover:text-white bg-red-600/80 hover:bg-red-600 border border-slate-800/80 px-3 py-1.5 rounded-xl text-xs font-semibold transition"
             >
               <X className="w-4 h-4" />
             </button>
